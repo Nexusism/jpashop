@@ -35,7 +35,7 @@ public class MemberServiceTest {
 
         //then
         em.flush(); // DB에 영속성 컨텍스트에 있는 데이터를 날리고 @Transactional로 롤백 시켜버림, DB에 데이터가 남지않고 테스트 진행하기위해
-        assertEquals(member, memberRepository.fineOne(savedId));
+        assertEquals(member, memberRepository.findOne(savedId));
 
     }
 
